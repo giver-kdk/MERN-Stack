@@ -1,4 +1,4 @@
-// JSX(JavaScript XML) is a syntax for using HTML inside JavaScript
+// JSX(JavaScript XML) is a syntax for using HTML inside JavaScript(ReactJS)
 // Using single parent element is allowed normally
 ReactDOM.render(<h1>I am a header</h1>, document.getElementById("root"));
 

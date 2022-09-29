@@ -2,7 +2,10 @@
 	React Component can be used to use a bunch of HTML elements as a single function
 */
 
-// Creation of component: Simple a function returning HTML
+// Component is simply a function returning HTML
+// Use PascalCase naming convention for function name
+//  1st letter of word capital in function name for ReactJS component
+// Otherwise, it won't work
 function MainContent()
 {
 	return (
