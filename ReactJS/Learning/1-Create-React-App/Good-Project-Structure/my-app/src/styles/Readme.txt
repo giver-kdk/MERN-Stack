@@ -1,0 +1,1 @@
+- This style folder contains global styling

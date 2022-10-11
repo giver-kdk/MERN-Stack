@@ -1,0 +1,2 @@
+- This project directory structure is optimal to avoid turning your code into a legacy(outdated) code
+- The designed folder structure with proper filenaming convention is recommended for better code maintainance

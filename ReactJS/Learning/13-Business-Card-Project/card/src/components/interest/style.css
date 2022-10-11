@@ -1,0 +1,22 @@
+.interest__info
+{
+	background-color: #1A1B21;
+}
+h2
+{
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	color: azure;
+}
+p
+{
+	text-align: left;
+	color: azure;
+	font-family: Inter, sans-serif;
+	font-size: 10px;
+}
+.container__interest
+{
+	padding: 0 10%;
+	padding-bottom: 10%;
+}

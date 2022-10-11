@@ -1,0 +1,57 @@
+.information
+{
+	background-color: #1A1B21;
+	border-radius: 10px 10px 0px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.information h2
+{
+	font-family: Inter, sans-serif;
+	color: azure;
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+.information h4
+{
+	font-family: Inter, sans-serif;
+	font-size: 1rem;
+	color: #F3BF99;
+	font-weight: 300;
+	margin-top: 0.3rem;
+}
+.information small
+{
+	color: azure;
+	font-family: Inter, sans-serif;
+	font-size: 10px;
+	margin-top: 0.5rem;
+}
+.btn
+{
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+}
+.mail, .linked
+{
+	width: 100px;
+	height: 30px;
+	background-color: white;
+	border-color: transparent;
+	border-radius: 6px;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.linked
+{
+	background-color: #5093E2;
+	color: azure;
+}

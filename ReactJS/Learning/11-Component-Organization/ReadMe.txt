@@ -1,0 +1,1 @@
+Just a simple react app for component management

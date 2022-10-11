@@ -8,7 +8,8 @@
 function Header()
 {
 	return (
-		<header>
+		// Inline-Styling in ReactJS. Use {{}} to write styles
+		<header style={{color: "blue", backgroundColor: "skyblue"}}>
 			<nav className="navbar">
 				<img className="logo" src="react_logo.png"></img>
 				<ul className="nav__items">

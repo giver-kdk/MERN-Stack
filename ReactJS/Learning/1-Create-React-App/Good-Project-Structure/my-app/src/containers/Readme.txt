@@ -1,0 +1,3 @@
+- The containers folder contains different pages of the react app
+- The pages have states
+- The pages can be home page, about us, contact us, etc

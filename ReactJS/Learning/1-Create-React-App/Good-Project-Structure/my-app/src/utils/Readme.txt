@@ -1,0 +1,1 @@
+- The utils folder contains all the JS files related to constants, enums, routing

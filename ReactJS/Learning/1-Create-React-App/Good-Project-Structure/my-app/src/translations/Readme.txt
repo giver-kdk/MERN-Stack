@@ -1,0 +1,1 @@
+- This translation folder contains translation related JavaScripts

@@ -1,0 +1,1 @@
+- This test folder contains the global/root test for global purpose

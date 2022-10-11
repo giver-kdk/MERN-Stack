@@ -1,0 +1,2 @@
+- This public folder contains main HTML and favicon for the websites
+- The robots.txt file contains rules for bot, scrapper and crawlers when accessing our web app data

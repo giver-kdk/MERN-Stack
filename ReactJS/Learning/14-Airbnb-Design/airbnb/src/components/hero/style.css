@@ -1,0 +1,25 @@
+body
+{
+	font-family: Poppins, sans-serif;
+}
+.hero__section
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.collection
+{
+	width: 400px;
+	padding: 20px;
+}
+.hero__title
+{
+	font-size: 36px;
+}
+.hero__info
+{
+	font-weight: lighter;
+	font-size: 16px;
+}

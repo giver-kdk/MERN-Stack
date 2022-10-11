@@ -1,0 +1,2 @@
+- The services folder contains all the services that is provided from the API
+- The serv folder contains the JS file containing API logic

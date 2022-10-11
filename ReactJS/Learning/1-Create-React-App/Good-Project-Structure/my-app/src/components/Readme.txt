@@ -1,0 +1,4 @@
+- The components folder contains all the componets used for the react app
+- The comp1, comp2, comp3, ... are the actual component folders that contains index.jsx as component
+- Each comp folders have styles folder containng multiple css files for styling, test folder containing testing codes for that component
+- Altogether, each comp folders have all the related files(style, test, wrapper) inside itself
