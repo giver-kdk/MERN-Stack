@@ -6,8 +6,22 @@
 	align-items: flex-start;
 	gap: 10px;
 	margin: 1rem;
+	position: relative;
 }
 .card__image
 {
 	border-radius:5px;
+	width: 200px;
+}
+.card__badge
+{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	background-color: azure;
+	font-weight: bold;
+	font-family: Inter, sans-serif;
+	font-size: small;
+	padding: 5px;
+	border-radius: 3px;
 }
