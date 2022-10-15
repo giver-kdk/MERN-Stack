@@ -3,12 +3,14 @@ import star from "../../../public/assets/star.png"
 import "./style.css"
 
 export default function Card(props) {
-    let badgeContent;
+	let badgeContent;
     if(props.item.openSpots == 0) badgeContent = "SOLD OUT";
     else if(props.item.location == "Online") badgeContent = "ONLINE";
-
+	
     return (
         <div className="card">
+			{/* During conditional render, we can also use ternary operator as: 
+			<p>{condition ? string1 : string2}</p> */}
             {badgeContent && <div className="card__badge">{badgeContent}</div>}
             <img src={`../../../public/assets/${props.item.coverImg}`} className="card__image" />
             <div className="card__info">

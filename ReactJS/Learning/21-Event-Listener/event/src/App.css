@@ -1,0 +1,13 @@
+.App
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.photo
+{
+	width: 400px;
+	border-radius: 5px;
+}
