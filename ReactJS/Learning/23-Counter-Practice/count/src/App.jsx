@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import { useState } from "react";
+import Count from "./count"
 
 function App() {
 	let [count, setCount] = useState(0);
@@ -23,9 +24,8 @@ function App() {
 		<div className="App">
 			<div className="counter">
 				<button className="counter--minus" onClick={decrement}>–</button>
-				<div className="counter--count">
-					<h1>{count}</h1>
-				</div>
+				{/* Here, "count" state can be passed to prop "value" */}
+				<Count value={count}/>
 				<button className="counter--plus" onClick={increment}>+</button>
 			</div>
 		</div>
