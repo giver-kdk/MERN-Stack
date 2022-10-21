@@ -17,6 +17,7 @@
 	font-size: 12px;
 	padding: 0.5rem;
 }
+
 .get__meme
 {
 	width: 650px;
@@ -31,4 +32,27 @@
 .meme__pic
 {
 	width: 500px;
+}
+.meme__visual
+{
+	position: relative;
+	font-family: Arial;
+	font-size: xx-large;
+	font-weight: bolder;
+	color: white;
+	-webkit-text-stroke: black;
+	-webkit-text-stroke-width: 2px;
+
+}
+.topText
+{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+}
+.bottomText
+{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
 }

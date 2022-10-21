@@ -1,3 +1,4 @@
+// This is just howthe data looks like after fetching it from the API
 export default {
     "success": true,
     "data": {
