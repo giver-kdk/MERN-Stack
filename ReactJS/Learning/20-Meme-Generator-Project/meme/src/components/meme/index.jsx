@@ -13,6 +13,7 @@ export default function meme()
 	});
 	useEffect(() =>
 	{
+		// Here, we can create a separate "async function" to use "async-await"
 		fetch("https://api.imgflip.com/get_memes")
 		.then(result => result.json())
 		.then(value => setMemeArray (value.data.memes));
