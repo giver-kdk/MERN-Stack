@@ -19,17 +19,24 @@ Challenge: Project setup
   the fonts. You may need to do some extra research to figure out how this 
   works if you haven't done it before)
 */
-import './App.css'
-import Navbar from './components/navbar'
-import Body from './components/body'
+import "./App.css";
+import Navbar from "./components/navbar";
+import Body from "./components/body";
+import {useState} from "react"
 
 function App() {
-  return (
-    <div className="App">
-      <Navbar/>
-      <Body/>
-    </div>
-  )
+	let [lightMode, setLightMode] = useState(false);
+	let modeStyle = lightMode ? " light" : "";
+	function toggle_mode()
+	{
+		setLightMode(prevLightMode => !prevLightMode);
+	}
+	return (
+		<div className={`App${modeStyle}`}>
+			<Navbar mode={modeStyle} handleClick={toggle_mode}/>
+			<Body mode={modeStyle}/>
+		</div>
+	);
 }
 
-export default App
+export default App;

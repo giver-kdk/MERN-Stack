@@ -41,7 +41,14 @@ function App() {
 
 	// Array destructuring method is easy and commonly used
 	// Here, "items" becomes the array(value) and "setItems" becomes the function to update the array
+	// NOTE: This initialization line runs at every render, but the value is not assigned
+	// Only, the new updated value is assigned to the state in background
 	let [items, setItems] = useState(["Item 1", "Item 2", "Item 3"]);
+
+	// Here, if we use a function returning value instead of direct value,
+	// Then the initialization behaves like "static" variable initialzation in C-Program
+	// It will not re-initialize next time. This may save CPU resource if complex functions used 
+	// let [items, setItems] = useState(() => ["Item 1", "Item 2", "Item 3"]);
 	function add_item() {
 		let newItemText = `Item ${items.length + 1}`;
 

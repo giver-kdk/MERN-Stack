@@ -4,16 +4,24 @@
 	margin: 0;
 	padding: 0;
 }
-body
+.App
 {
 	background-color: #282D35;
-	color: white;
 	height: 100vh;
 	font-family: Inter, sans-serif;
 	background-image: url("./assets/react-icon-large.png");
 	background-repeat: no-repeat;
 	background-position-x: right;
 	background-position-y: 75%;
+}
+.App.light
+{
+	background-color: #ffffff;
+}
+.body.light
+{
+	color: #2B283A;
+	background-color: #ffffff;
 }
 .navbar
 {
@@ -22,7 +30,13 @@ body
 	align-items: center;
 	padding: 25px;
 	background-color: #21222A;
-
+	color: white;
+}
+.navbar.light
+{
+	color: #2B283A;
+	background-color: #ffffff;
+	filter: drop-shadow(0 3px 5px rgb(208, 208, 208));
 }
 .brand
 {
@@ -36,10 +50,14 @@ body
 {
 	height: 30px;
 }
-.brand h3
+.title
 {
 	font-size: 22.25px;
 	color: #61DAFB;
+}
+.title.light
+{
+	color: #00ABCA;
 }
 .nav__items
 {
@@ -50,16 +68,78 @@ body
 	list-style: none;
 	gap: 20px;
 }
+.mode
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.light__mode
+{
+	color: #918E9B;
+}
+.light__mode.light
+{
+	color: #2B283A;
+}
+.dark__mode
+{
+	color: #ffffff;
+}
+.dark__mode.light
+{
+	color: #D5D4D8;
+}
+.toggle__btn
+{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 40px;
+	height: 20px;
+	border-radius: 50px;
+	margin: 0 0.5rem 0 0.5rem;
+	background-color: #F5F5F5;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.toggle__btn.light
+{
+	background-color: #2B283A;
+	justify-content: flex-start;
+}
+.toggle__circle
+{
+	background-color: #222222;
+	border-radius: 50px;
+	margin: 0 2px 0 2px;
+	height: 16px;
+	width: 16px;
+}
+.toggle__circle.light
+{
+	background-color: #ffffff;
+}
 .header
 {
 	font-size: 39.06px;
 	padding: 3rem;
+	color: #ffffff;
+}
+.header.light
+{
+	color: #2B283A;
 }
 .list
 {
 	padding: 0 6rem;
 	line-height: 2rem;
+	color: #ffffff;
 	/* border: 2px solid red; */
+}
+.list.light
+{
+	color: #2B283A;
 }
 .list > li::marker
 {
