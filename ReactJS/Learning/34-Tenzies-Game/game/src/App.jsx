@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { useEffect } from "react";
 import "./App.css";
 
 function App() {
 
 	let [dices, setDices] = useState(initialize());
+	let [suggest, setSuggest] = useState("Play Game");
+	let [btnContent, setBtnContent] = useState("Roll");
+	let [selectedNum, setSelectedNum] = useState(-1);
 	let diceElem = [];
-	let selectedNum = 1;
 	function initialize()
 	{
 		let newDices = [];
@@ -25,9 +26,10 @@ function App() {
 	{
 		setDices(prevDices =>
 			{
-				return prevDices.map((dice, index) =>
+				let isfinished = true;
+				let newDices = prevDices.map((dice, index) =>
 					{
-						if(id == index)
+						if(id == index && !dice.isFixed)
 						{
 							return {
 								...dice,
@@ -36,6 +38,23 @@ function App() {
 						}
 						else return {...dice};
 					})
+				for(let i = 0; i < newDices.length - 1; i++)
+				{
+					if((newDices[i].value != newDices[i + 1].value))
+					{
+						isfinished = false;
+					}
+				}
+				if(newDices.filter(dice => dice.isSelected).length != 10)
+				{
+					isfinished = false;
+				}
+				if(isfinished)
+				{
+					setBtnContent("Reset");
+					setSuggest("Congratulations! You Completed the game");
+				}
+				return newDices;
 			})
 	}
 	// Populate the array as HTML element
@@ -51,32 +70,70 @@ function App() {
 
 	function handleRoller()
 	{
-		
-		let reset = true;
-		dices.forEach(dice =>
-			{
-				if(!dice.isSelected || (dice.value != selectedNum)) reset = false;
-			})
-		let newDices = initialize();
-		if(reset)
+		let isValid = true;
+		let selectedDices = dices.filter(dice => dice.isSelected);
+		for(let i = 0; i < selectedDices.length - 1; i++)
 		{
-			setDices([...newDices]);
+			if(selectedDices[i].value != selectedDices[i + 1].value) isValid = false;
+		}
+		if(isValid)
+		{
+			setDices(prevDices =>
+				{
+					return prevDices.map(dice =>
+						{
+							if(dice.isSelected)
+							{
+								return {
+									...dice,
+									isFixed: true
+								};
+							}
+							else return {...dice};
+						});
+				});
+			let reset = true;
+			dices.forEach(dice =>
+				{
+					if(!dice.isSelected || (dice.value != selectedNum)) reset = false;
+				})
+			let newDices = initialize();
+			if(reset)
+			{
+				setDices([...newDices]);
+				setBtnContent("Roll");
+				setSuggest("Play Game");
+				setSelectedNum(-1);
+			}
+			else
+			{
+				setDices(prevDices =>
+				{
+					prevDices.map((dice, index) =>
+						{
+							if(dice.isSelected)
+							{
+								newDices[index].value = dice.value;
+								newDices[index].isSelected = true;
+								newDices[index].isFixed = true;
+							}
+						});
+					return [...newDices];
+				});
+			}
+			
+			if(selectedNum == -1)
+			{
+				let selection = dices.filter(dice => dice.isSelected)[0].value;
+				setSelectedNum(selection);
+				setSuggest(`You selected ${selection}. Select more of these`);
+			}
 		}
 		else
 		{
-			setDices(prevDices =>
-			{
-				prevDices.map((dice, index) =>
-					{
-						if(dice.isSelected)
-						{
-							newDices[index].value = dice.value;
-							newDices[index].isSelected = true;
-						}
-					});
-				return [...newDices];
-			});
+			setSuggest("Selected Dices should be same");
 		}
+		
 	}
 	return <div className="App">
 		<div className="container">
@@ -85,21 +142,9 @@ function App() {
 				<p className="game__info">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
 				<div className="dices">
 				{diceElem}
-				{/* <div className="dice selected">1</div>
-				<div className="dice">1</div>
-				<div className="dice">1</div>
-				<div className="dice">1</div>
-				<div className="dice">1</div>
-
-				<div className="dice">1</div>
-				<div className="dice">1</div>
-				<div className="dice">1</div>
-				<div className="dice">1</div>
-				<div className="dice">1</div> */}
-
 				</div>
-				<button className="roller" onClick={handleRoller}>Roll</button>
-				<div className="suggestion">Play Game!</div>
+				<button className="roller" onClick={handleRoller}>{btnContent}</button>
+				<div className="suggestion">{suggest}</div>
 			</div>
 		</div>
 	</div>;
