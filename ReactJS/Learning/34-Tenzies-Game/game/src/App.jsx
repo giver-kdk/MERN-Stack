@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-
 	let [dices, setDices] = useState(initialize());
 	let [suggest, setSuggest] = useState("Play Game");
 	let [btnContent, setBtnContent] = useState("Roll");
