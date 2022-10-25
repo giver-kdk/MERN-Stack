@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import "./App.css";
 
 function App() {
-
 	let [dices, setDices] = useState(initialize());
 	let diceElem = [];
 	let selectedNum = 1;
