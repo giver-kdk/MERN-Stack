@@ -74,7 +74,6 @@ export default function form()
 			/>
 
 			{/* Email Input */}
-
 			<input 
 			type="email" 
 			placeholder='example@gmail.com'
