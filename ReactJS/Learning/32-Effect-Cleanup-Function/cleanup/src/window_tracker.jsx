@@ -4,8 +4,9 @@ import {useEffect} from "react"
 
 /*
 	- In DMA of C-Program, we use free() to cleanup the allocated memeory when DMA is not required, 
-	  just like that we need to do cleanup if our component is going to be removed from DOM. To do so: 
-		- When component containing useEffect/side effect is removed, then 
+	  just like that we need to do cleanup if our component is going to be removed/unmounted from DOM.
+	   To do so: 
+		- When component containing useEffect/side effect is removed/unmounted from the DOM, then 
 		  ReactJS immediately runs a function returned by useEffect's "callback function"
 		- That returned function can be used to cleanup the side effect like: 
 		  Removing Event Listeners, Clearing Local Storage, etc

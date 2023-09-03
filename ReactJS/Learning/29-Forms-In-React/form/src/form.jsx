@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from "react"
 import "./form.css"
 
@@ -43,7 +43,7 @@ export default function form()
 	{
 		e.preventDefault();
 
-		// Acces the latest form data using the state variable directly
+		// Access the latest form data using the state variable directly
 		console.table(formData);
 	}
 	return (
@@ -74,7 +74,6 @@ export default function form()
 			/>
 
 			{/* Email Input */}
-
 			<input 
 			type="email" 
 			placeholder='example@gmail.com'

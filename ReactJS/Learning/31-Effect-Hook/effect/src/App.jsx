@@ -12,9 +12,10 @@ import { useEffect } from "react";
 	- Examples of dependencies variables are: props, states, etc
 	- Execution of useEffect() depends on: 
 		- If there is no dependencies array parameter, then "useEffect()" run at every re-render of DOM
-		- If dependencies array is empty, then "useEffect()" runs once at first DOM render only
+		- If dependencies array is empty, then "useEffect()" runs once at first DOM render only(Component Mount)
 		- If dependencies array has variable, then "useEffect()" runs at first, then 
 		  further execution happens only if one of the dependecies variable is changed/updated in new render
+	- Function inside "useEffect()" runs only after the Component is mounted on the DOM ( Like "onLoad" for Components)
 */
 
 function App() {
