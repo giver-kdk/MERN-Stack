@@ -39,7 +39,7 @@ function App() {
 					})
 				for(let i = 0; i < newDices.length - 1; i++)
 				{
-					if((newDices[i].value != newDices[i + 1].value))
+					if((newDices[i].value != newDices[i + 1].value))2
 					{
 						isfinished = false;
 					}
