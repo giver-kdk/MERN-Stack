@@ -46,13 +46,13 @@
 		- Allows to create reducer function with easy syntax. This is also optional.
 
 - The workflow is: 
-	- Slice is created for particular type of state
+	- Slice is created for particular type of state (Make slices in individual files for clean code)
 	- Store is created with slice's reducer and exported
-	- Action is simply exported
+	- Action is simply exported from each slice file
 
-	- User triggers something in component
+	- User triggers something in component (event)
 	- According to that, certain slices's action function(arg_as_payload) is called directly
-	- Reducer function of that particular slice updates respective state
+	- Reducer function of that particular slice updates respective state(event handling)
 
 ******************** Redux Thunk ********************
 - A function in redux to handle redux and HTTP request
