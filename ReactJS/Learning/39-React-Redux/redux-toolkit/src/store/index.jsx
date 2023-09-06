@@ -12,7 +12,8 @@ let counterSlice = createSlice({
 			state.counter++;
 		},
 		decrement(state, action){
-			state.counter--;
+			// Or, we can also return modified copy of state like in redux 
+			return {counter: state.counter - 1};
 		},
 		addBy(state, action){
 			state.counter += action.payload;

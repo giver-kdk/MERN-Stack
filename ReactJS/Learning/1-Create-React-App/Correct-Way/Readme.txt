@@ -18,3 +18,4 @@ NOTE:
 - "index.html" is the main HTML file that gets rendered
 - "index.js" is the main JS file included in "index.html"
 - "App.js" is the JS file where we write React.JS codes
+- Type "rf" + "Enter" for a react component boilerplate
