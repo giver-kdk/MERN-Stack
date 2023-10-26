@@ -5,6 +5,7 @@ function App() {
 	// "useSelector()" takes function argument that return a part of state, we need
 	// So, basically, it selects the part of the state we need 
 	let count = useSelector(state => state.counter);
+	// Execute 'useDispatch()' once to be get access to dispatching functionality
 	let dispatch = useDispatch();
     function increment() {
 		// Send the "INC" action instruction to reducer
