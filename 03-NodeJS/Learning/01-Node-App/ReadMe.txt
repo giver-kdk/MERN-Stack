@@ -1,0 +1,3 @@
+- We need to install latest LTS version of NodeJS in our computer
+- Then use "node" to run node js apps
+- In vs-code, 'Ctrl + Alt + N' can also run node app

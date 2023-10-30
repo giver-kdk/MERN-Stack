@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="ruWpIEa1NAqH7bt3nlUz" name="Page-1">
+        <mxGraphModel dx="401" dy="321" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" style="edgeStyle=none;html=1;fontColor=#191919;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font color=&quot;#030202&quot; style=&quot;font-size: 10px;&quot;&gt;Client&lt;/font&gt;" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#006EAF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#1ba1e2;shape=mxgraph.azure.computer;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="193.5" width="61.11" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=10;fontColor=#191919;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font color=&quot;#191919&quot; style=&quot;font-size: 10px;&quot;&gt;Server&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#006EAF;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.traditional_server;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="177" width="50.77" height="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="NodeJS" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#191919;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="545.39" y="230" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
