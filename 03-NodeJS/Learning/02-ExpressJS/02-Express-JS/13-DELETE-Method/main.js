@@ -7,7 +7,6 @@ const {people} = require("./data.js");
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-
 app.get("/", (req, res) => {
 	res.send("Home Page");
 });
@@ -26,7 +25,6 @@ app.delete("/api/people/:id", (req, res) => {
 });
 
 app.listen(5000, () => console.log("Listening on Port 5000!!!"));
-
 
 // NOTE: Please use API testing tool like Thunder Client (or Postman) to see Request-Response
 // Because, there is no front-end code written for this code

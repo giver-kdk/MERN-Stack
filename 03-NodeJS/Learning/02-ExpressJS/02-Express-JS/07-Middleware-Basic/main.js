@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 
-// Middlewares are the separate functions that processes the request to send the response 
+// Middlewares are functions that can run some logic and change req/res object
+// Middlewares are generic in nature. So, it can be used by multiple similar routes  
+// It can end req/res cycle but not used to provide response like 'Controllers'  
+
 // Order of use is: req => middleware => res
 
 // Process GET requets without middleware

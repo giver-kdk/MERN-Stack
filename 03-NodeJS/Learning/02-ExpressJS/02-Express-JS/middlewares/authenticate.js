@@ -1,3 +1,5 @@
+// For middlewares, no need to use 'express' module here
+// Just create function and export
 function authenticate(req, res, next)
 {
 	const {name} = req.query;
