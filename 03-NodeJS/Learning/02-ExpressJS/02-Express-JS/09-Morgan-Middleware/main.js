@@ -8,7 +8,7 @@ const morgan = require("morgan");
 // 'morgan()' parameters can be: tiny, dev, short, etc.
 // app.use(morgan("dev"));
 // app.use(morgan("short"));
-app.use(morgan("tiny"));
+app.use(morgan("tiny"));			// Applies 'morgan' middleware on all routes
 
 app.get("/", (req, res) => {
 	res.send("Home Page");

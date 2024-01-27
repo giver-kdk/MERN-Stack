@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./normalize.css" />
+	<link rel="stylesheet" href="./styles.css" />
+	<title>POST via Javascript</title>
+</head>
+
+<body>
+	<nav>
+		<div class="nav-center">
+			<h5>HTTP Methods</h5>
+		</div>
+	</nav>
+	<main>
+		<section>
+			<form>
+				<h3>Javascript Form</h3>
+				<div class="form-row">
+					<label for="name"> enter name </label>
+					<input type="text" name="name" id="name" class="form-input" autocomplete="false" />
+					<small class="form-alert"></small>
+				</div>
+				<button type="submit" class="block submit-btn">submit</button>
+			</form>
+			<div class="result"></div>
+		</section>
+	</main>
+
+	<!-- Using 'axios' in Client Side JavaScript via CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+		integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+		crossorigin="anonymous"></script>
+	<script>
+		const result = document.querySelector(".result");
+		// submit form
+		const btn = document.querySelector(".submit-btn");
+		const input = document.querySelector(".form-input");
+		const formAlert = document.querySelector(".form-alert");
+		btn.addEventListener("click", async (e) => {
+			e.preventDefault();
+			const nameValue = input.value;
+
+			try {
+				// POST request includes URL and BODY DATA to get server response
+				// 'data' we get is the JSON data sent from server
+				const { data } = await axios.post("/api/people", { name: nameValue });
+
+				// Add the response data in the client side    
+				// Here, we are not actually using updated data
+				const h5 = document.createElement("h5");
+				h5.textContent = data.person;
+				result.appendChild(h5);
+			} catch (error) {
+				// Error sent from server side
+				formAlert.textContent = error.response.data.errData;
+			}
+		});
+	</script>
+</body>
+
+</html>
