@@ -11,4 +11,8 @@ const {getHome, getAbout} = require("../controllers/home");
 router.get("/", getHome);
 router.get("/about", getAbout);
 
+// Another method to set router
+// router.route("/").get(getHome);
+// router.route("/about").get(getAbout);
+
 module.exports = router;
