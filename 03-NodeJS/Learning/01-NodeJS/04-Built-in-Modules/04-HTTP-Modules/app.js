@@ -1,5 +1,7 @@
 // Goto 'localhost:5000' in browser to see the output
 const http = require("http");
+// 'process.env.port' needed to host on different environment(Eg: AWS, Heroku, etc.)
+const port = process.env.PORT || 5000;
 // Creatign a web server to process request and response
 const server = http.createServer((req, res) =>{
 	if(req.url=="/") 						// Checking request
@@ -17,4 +19,4 @@ const server = http.createServer((req, res) =>{
 });
 // A server needs to be awake all the time. 
 // So, if we listen to a port, then the app won't get terminated until we do.
-server.listen(5000);			// Making the server to listern to port: 5000
+server.listen(port);			// Making the server to listern to port: 5000
