@@ -1,0 +1,3 @@
+/node_modules
+# We put environment information in '.env' file. So, keep it a secret.
+.env
