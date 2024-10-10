@@ -1,4 +1,4 @@
-- Above files contains the code logic for different topix of Express.js
+- Above files contains the code logic for different topics of Express.js
 - Copy code form those respective 'main.js' files and paste on 'app.js'
 - Type 'npm start' to run the application 
 

@@ -1,0 +1,2 @@
+- Create React/Next or any other frontend project to use the backend.
+- Make sure to run the frontend and backend in different ports.

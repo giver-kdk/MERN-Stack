@@ -1,0 +1,35 @@
+**************** SETUP MONGODB ATLAS FOR CLOUD DATABASE ****************
+
+- Create account in MongoDB Atlas: https://www.mongodb.com/products/platform/atlas-database
+- Create MongoDB Cluster (Collection of DB) and allow access for all users to use the DB
+	- Then create your DB fo ramnual database creation
+	- To progamatically create the database: 
+		- Copy connection string from the MongoDB Cluster (at MongoDB Atlas)
+		- Use the connection string with Mongoose to create DB automatically
+
+- You can refer to this documentation: https://www.mongodb.com/resources/products/fundamentals/create-database#using-the-mongodb-atlas-ui  
+
+
+
+
+**************** STEPS FOR MERN BACKEND SETUP ******************
+
+- Run following commands on the project directory: 
+	- npm init
+	- npm install nodemon --save-dev
+	- npm install express mongoose dotenv
+	- Create .gitignore file to ignore 'node_modules' and '.env' file
+	
+- Make sure to have 'app.js' as entry point in package.json and create 'app.js' file
+	- Set script in package.json as "start": "nodemon app.js" to run app with nodemon
+	- Create server and listen to particular port (manual or variable port)
+
+- Connect to MongoDB database using the connection string from MongoDB Atlas Cluster
+	- Store the connection string in a variable in '.env' file
+	- You have to manually add the database name in the connection string after '/'
+	- Connection String format: <database_url>/<databaseName>?<parameters>
+	- Import the connection string and use for database connection using 'mongoose'
+
+
+
+
