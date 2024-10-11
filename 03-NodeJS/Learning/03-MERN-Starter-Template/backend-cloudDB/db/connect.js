@@ -2,13 +2,7 @@
 const mongoose = require("mongoose");			// Use mongoose driver for systematic MongoDB interaction
 
 const connectDB = (url) => {
-	return mongoose.connect(url, {
-		// Options to use newer methods
-		// useNewUrlParser: true,
-		// useCreateIndex: true,
-		// useFindAndModify: false,
-		// useUnifiedTopology: true,
-	})
+	return mongoose.connect(url);
 }
 
 module.exports = connectDB;

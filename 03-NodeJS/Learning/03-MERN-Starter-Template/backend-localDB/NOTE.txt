@@ -1,0 +1,26 @@
+- Install MondoDB Community Server
+	- Link: https://www.mongodb.com/try/download/community
+	- After installation, Add its bin folder path to Environment Variable
+
+- Install MongoDB Compass for GUI Interface (Optional but Helpful)
+	- Link: https://www.mongodb.com/products/tools/compass
+
+
+*************************** MAIN STEP *******************************
+
+- Start local MongoDB Server with command: 
+	- mongod
+
+- Open MongoDB Compass to manage the connection:
+	- Copy database connection string from MongoDB Compass
+
+- Use that URI in the MERN app same as MongoDB Atlas Cloud Database
+	- Generally: mongodb://localhost:27017/<database_name>
+
+
+
+
+
+- NOTE: Download MongoDB Commandline Tools for productivity (Eg: Database Migration)
+	- Link: https://www.mongodb.com/try/download/database-tools
+
