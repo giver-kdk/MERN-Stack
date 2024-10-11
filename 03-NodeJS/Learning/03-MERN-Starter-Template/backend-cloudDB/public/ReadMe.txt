@@ -1,1 +1,1 @@
-Assets that can be shared publoicly in client side are stored in this directory.
+Static assets that can be shared publoicly in client side are stored in this directory.
