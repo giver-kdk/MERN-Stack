@@ -26,6 +26,7 @@
 
 - Connect to MongoDB database using the connection string from MongoDB Atlas Cluster
 	- Store the connection string in a variable in '.env' file
+		- Format: VARIABLE_NAME = CONNECTION_STRING
 	- You have to manually add the database name in the connection string after '/'
 	- Connection String format: <database_url>/<databaseName>?<parameters>
 	- Import the connection string and use for database connection using 'mongoose'
