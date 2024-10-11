@@ -20,8 +20,8 @@
 	- npm install express mongoose dotenv
 	- Create .gitignore file to ignore 'node_modules' and '.env' file
 	
-- Make sure to have 'app.js' as entry point in package.json and create 'app.js' file
-	- Set script in package.json as "start": "nodemon app.js" to run app with nodemon
+- Make sure to have 'src/app.js' as entry point in package.json and create 'app.js' file inside 'src' folder
+	- Set script in package.json as "start": "nodemon src/app.js" to run app with nodemon
 	- Create server and listen to particular port (manual or variable port)
 
 - Connect to MongoDB database using the connection string from MongoDB Atlas Cluster
@@ -29,6 +29,16 @@
 	- You have to manually add the database name in the connection string after '/'
 	- Connection String format: <database_url>/<databaseName>?<parameters>
 	- Import the connection string and use for database connection using 'mongoose'
+
+- Create Middlewares for process between Request-Response
+
+- Create data model for storing the data in database
+
+- Match the proper controller name for specific routes
+
+- Define controller functions (You can use the model object for CRUD Operation)
+
+- Create custom error handler for handling unexpected error in runtime
 
 
 
